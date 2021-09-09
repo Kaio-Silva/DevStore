@@ -6,8 +6,11 @@ const Container = styled.div`
     
     background-color: #2B3031;
     
-    min-height: 100vh;
+    height: 100vh;
     padding-bottom: 0em;
+
+    position: sticky;
+    top: 0px;
 
         
     .header-left-box {
