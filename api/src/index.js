@@ -20,7 +20,21 @@ app.post('/produto', async (req, resp) =>{
     try{
         let { nome, categoria, precoDE, precoPOR, avaliacao, 
               estoque, descricao, imagem } = req.body;
-             
+
+        if(nome == "" || categoria == "" || descricao == "" || imagem == "")
+                return resp.send({ erro: "É obrigatório preencher todos os campos !!"})
+        
+        if(avaliacao <= 0 || estoque <= 0 || precoDE <= 0 || precoPOR <= 0)
+            return resp.send({ erro: "É obrigatório passar valores maiores que zero !!" })  
+            
+        if(isNaN(precoDE) || isNaN(precoPOR) || isNaN(avaliacao)|| isNaN(estoque)){
+            return resp.send({ erro: "Não é possivel usar textos em campos de números !!"})    
+        }
+
+        let conferir = await db.tb_produto.findOne({ where: { nm_produto: nome }})
+        if(conferir != null)
+            return resp.send({ erro: "Esse produto ja existe !!" })
+
         let r = await db.tb_produto.create({
             nm_produto: nome,
             ds_categoria: categoria,
@@ -46,6 +60,16 @@ app.put('/produto/:id', async (req, resp) =>{
             estoque, descricao, imagem } = req.body;
            
         let { id } = req.params
+
+        if(nome == "" || categoria == "" || descricao == "" || imagem == "")
+                return resp.send({ erro: "É obrigatório preencher todos os campos !!"})
+        
+        if(avaliacao <= 0 || estoque <= 0 || precoDE <= 0 || precoPOR <= 0)
+            return resp.send({ erro: "É obrigatório passar valores maiores que zero !!" })  
+            
+        if(isNaN(precoDE) || isNaN(precoPOR) || isNaN(avaliacao)|| isNaN(estoque)){
+            return resp.send({ erro: "Não é possivel usar textos em campos de números !!"})    
+        }
 
         let r = await db.tb_produto.update({
             nm_produto: nome,
