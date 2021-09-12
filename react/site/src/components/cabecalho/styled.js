@@ -26,7 +26,7 @@ const Container = styled.div`
 
     .left-button button {
         border-radius: 50%;
-        background-color: #986CDF;
+        background-color: #119FDC;
         width: 44px;
         height: 44px;
         border: none;
@@ -35,7 +35,7 @@ const Container = styled.div`
 
     .refresh-button button {
         border-radius: 50%;
-        background-color: #986CDF;
+        background-color: #119FDC;
         width: 44px;
         height: 44px;
         border: none;

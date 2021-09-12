@@ -1,0 +1,7 @@
+-- host: my01.winhost.com
+--   bd: mysql_17753_nsf2021
+--  usr: nsf2021
+--  pwd: nsf@2021
+
+
+npx sequelize-auto -h my01.winhost.com -d mysql_17753_nsf2021 -u nsf2021 -x nsf@2021 -e mysql -o models -l esm
