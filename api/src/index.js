@@ -104,6 +104,5 @@ app.delete('/produto/:id', async (req, resp) =>{
 })
 
 
-app.listen(process.env.PORT,
-
-x => console.log(`Server up at port ${process.env.PORT}`))
+app.listen(process.env.PORT, 
+           x => console.log(`Server up at port ${process.env.PORT}`))
