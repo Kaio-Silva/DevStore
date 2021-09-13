@@ -73,6 +73,7 @@ const Container = styled.div`
         border-radius: 5px;
         padding: .5em;
         resize: none;
+        cursor: text;
     }
 
     .input1 {
@@ -102,6 +103,7 @@ const Container = styled.div`
         border-radius: 5px;
         padding-left: .5em;
 
+        cursor: text;
     }
 
     .name-student {
