@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 import Cabecalho from '../../components/cabecalho'
 import Menu from '../../components/menu'
 
-//oiiiii
 
 import { Container, Conteudo } from './styled.js'
 

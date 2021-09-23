@@ -19,7 +19,7 @@ export default function Index() {
                         <img src="/assets/images/neo.png" alt="" />
                         <div class="absolute">3</div>
                     </div>
-                    <div class="user-name"> Olá, <b>Luigi da Silva Coelho</b> </div>
+                    <div class="user-name"> Olá, <b>Kaio da Silva Coelho</b> </div>
                 </div>
                 
                 <div class="box-image">
